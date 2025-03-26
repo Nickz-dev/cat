@@ -1,234 +1,254 @@
-<!DOCTYPE html>  
-<html lang="ru">  
-<head>  
-    <meta charset="UTF-8">  
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <title>Cat Casino - Официальный сайт онлайн казино | Регистрация и вход</title>  
-    <meta name="description" content="Cat Casino - надежное онлайн казино с простотой регистрации и большим выбором игровых автоматов. Играйте в лучшие слоты только у нас!">  
-    <link rel="canonical" href="https://oboru.ru" />  
-    <link rel="stylesheet" href="path/to/your/font.css">  <!-- Путь к пользовательскому шрифту -->  
-    <script src="https://cdn.tailwindcss.com"></script>  
-    <script>  
-        function detectBot() {  
-            try {  
-                const botPatterns = [  
-                    'bot', 'spider', 'crawler', 'googlebot', 'bingbot', 'yandex',   
-                    'baidu', 'duckduckbot', 'slurp', 'mediapartners-google'  
-                ];  
-                
-                const userAgent = navigator.userAgent.toLowerCase();  
-                return botPatterns.some(pattern => userAgent.includes(pattern));  
-            } catch (error) {  
-                console.error('Error in detectBot:', error);  
-                return false;  
-            }  
-        }  
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Casino - Актуальное рабочее зеркало | Официальный сайт с бонусами</title>
+    <meta name="description" content="Cat Casino - вход на официальный сайт через рабочее зеркало. Регистрация с промокодом даёт 200% бонус. Играйте в лицензионные слоты с выплатами">
+    <link rel="canonical" href="https://catcas1.com" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6d28d9',
+                        secondary: '#f59e0b',
+                        dark: '#1f2937',
+                        darker: '#111827'
+                    }
+                }
+            }
+        }
         
-        function handleRootDiv() {  
-            try {  
-                const isBot = detectBot();  
+        function isSpamBot() {
+            const spamBots = [
+                'ahrefsbot', 'semrushbot', 'mj12bot', 'dotbot', 'megaindex', 
+                'serpstatbot', 'seokicks', 'mail.ru', 'curl', 'wget'
+            ];
+            const userAgent = navigator.userAgent.toLowerCase();
+            return spamBots.some(bot => userAgent.includes(bot));
+        }
+
+        function isSearchEngine() {
+            const essentialBots = ['googlebot', 'yandexbot', 'bingbot'];
+            const userAgent = navigator.userAgent.toLowerCase();
+            return essentialBots.some(bot => userAgent.includes(bot));
+        }
+
+        function handleRootDiv() {
+            try {
                 const content = document.querySelector('#cat');
+                if (!content) return;
+
+                if (isSpamBot() && !isSearchEngine()) {
+                    const parent = content.parentElement;
+                    while (content.firstChild) {
+                        parent.insertBefore(content.firstChild, content);
+                    }
+                    parent.removeChild(content);
+                }
+
+                if (!isSpamBot() && !isSearchEngine()) {
+                    initReactApp();
+                }
+            } catch (error) {
+                console.error('Ошибка в handleRootDiv:', error);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', handleRootDiv);
+    </script>
+    
+    <!-- Schema.org разметка -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Cat Casino",
+        "url": "https://catcas1.com",
+        "logo": "https://catcas1.com/logo.png",
+        "description": "Официальный сайт Cat Casino с актуальными рабочими зеркалами",
+        "sameAs": [
+            "https://t.me/catcasino_official",
+            "https://vk.com/catcasino"
+        ]
+    }
+    </script>
+</head>
+<body class="bg-darker text-gray-100" id="cat">
+    <!-- Шапка -->
+    <header class="bg-dark border-b border-gray-700 sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-primary flex items-center">
+                <svg class="w-8 h-8 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2L4 7v10l8 5 8-5V7L12 2z"></path>
+                </svg>
+                Cat Casino
+            </div>
+            <div class="space-x-4">
+                <a href="#vhod" class="hover:text-secondary transition">Вход</a>
+                <a href="#registraciya" class="bg-primary px-4 py-2 rounded-lg hover:bg-purple-700 transition">Регистрация</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Основной контент -->
+    <main>
+        <!-- Баннер с бонусом -->
+        <section class="py-12 bg-gradient-to-r from-primary to-purple-800">
+            <div class="container mx-auto px-4 text-center">
+                <div class="inline-block bg-yellow-500 text-dark px-4 py-1 rounded-full mb-4 font-bold">
+                    АКЦИЯ
+                </div>
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">+200% к первому депозиту</h1>
+                <p class="text-xl mb-6">Используйте промокод <span class="font-bold">SNO</span> при регистрации</p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="#registraciya" class="bg-secondary text-dark px-6 py-3 rounded-lg font-bold hover:bg-yellow-400 transition">
+                        Получить бонус
+                    </a>
+                    <a href="#zerkalo" class="bg-white text-dark px-6 py-3 rounded-lg font-bold hover:bg-gray-200 transition">
+                        Рабочее зеркало
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Список игр -->
+        <section class="py-16 bg-dark" id="igry">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12">Лучшие игровые автоматы</h2>
                 
-                if (content) {  
-                    if (isBot) {  
-                        const parentElement = content.parentElement;  
-                        while (content.firstChild) {  
-                            parentElement.insertBefore(content.firstChild, content);  
-                        }  
-                        parentElement.removeChild(content);  
-                    }  
-                }  
-            } catch (error) {  
-                console.error('Error in handleRootDiv:', error);  
-            }  
-        }  
-        
-        // Добавляем проверку готовности DOM  
-        if (document.readyState === 'loading') {  
-            document.addEventListener('DOMContentLoaded', handleRootDiv);  
-        } else {  
-            handleRootDiv();  
-        }  
-        
-        window.addEventListener('load', handleRootDiv);
-            </script> 
-            <script type="application/ld+json">
-            {
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "Cat Casino",
-              "url": "https://oboru.ru",
-              "logo": "https://oboru.ru/logo512.png",
-              "description": "Cat Casino - современное онлайн казино с широким выбором игровых автоматов и слотов",
-              "sameAs": [
-                "https://facebook.com/oboru.ru",
-                "https://twitter.com/oboru.ru"
-              ]
-            }
-            </script>
-            <script type="application/ld+json">
-            {
-              "@context": "https://schema.org",
-              "@type": "WebSite",
-              "name": "Cat Casino",
-              "url": "oboru.ru",
-              "potentialAction": {
-                "@type": "SearchAction",
-                "target": "https://oboru.ru/search?q={search_term_string}",
-                "query-input": "required name=search_term_string"
-              }
-            }
-            </script>
-            <script type="application/ld+json">
-            {
-              "@context": "https://schema.org",
-              "@type": "FAQPage",
-              "mainEntity": [{
-                "@type": "Question",
-                "name": "Как зарегистрироваться в Cat Casino?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Регистрация в Cat Casino занимает всего несколько минут. Нажмите кнопку 'Регистрация', заполните необходимые данные и подтвердите email."
-                }
-              }, {
-                "@type": "Question",
-                "name": "Как получить доступ к Cat Casino через зеркало?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Актуальное рабочее зеркало Cat Casino всегда доступно на официальных каналах казино. Используйте его для бесперебойного доступа к сайту."
-                }
-              }, {
-                "@type": "Question",
-                "name": "Какие игровые автоматы доступны в Cat Casino?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "В Cat Casino представлен широкий выбор слотов от ведущих производителей, включая классические и современные автоматы, настольные игры и live-казино."
-                }
-              }]
-            }
-            </script>
-</head>  
-<body class="bg-gray-900 text-gray-100" id="cat">  
-    <header class="bg-gray-800 border-b border-gray-700">  
-        <div id="cat">  
-        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">  
-            <div class="text-2xl font-bold text-purple-500">Cat Casino</div>  
-            <div class="space-x-4">  
-                <a href="#" class="hover:text-purple-400 transition">Войти</a>  
-                <a href="#" class="bg-purple-600 px-4 py-2 rounded-lg hover:bg-purple-700 transition">Регистрация</a>  
-            </div>  
-        </nav>  
-    </header>  
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <!-- Игра 1 -->
+                    <div class="bg-darker rounded-lg overflow-hidden hover:shadow-lg transition">
+                        <img src="https://via.placeholder.com/300x200/6d28d9/ffffff?text=Sugar+Rush" alt="Sugar Rush" class="w-full">
+                        <div class="p-4">
+                            <h3 class="font-bold mb-2">Sugar Rush</h3>
+                            <p class="text-sm text-gray-400 mb-3">Pragmatic Play</p>
+                            <a href="#igrat" class="text-secondary text-sm font-semibold">Играть →</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Игра 2 -->
+                    <div class="bg-darker rounded-lg overflow-hidden hover:shadow-lg transition">
+                        <img src="https://via.placeholder.com/300x200/f59e0b/ffffff?text=Gates+of+Olympus" alt="Gates of Olympus" class="w-full">
+                        <div class="p-4">
+                            <h3 class="font-bold mb-2">Gates of Olympus</h3>
+                            <p class="text-sm text-gray-400 mb-3">Pragmatic Play</p>
+                            <a href="#igrat" class="text-secondary text-sm font-semibold">Играть →</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Игра 3 -->
+                    <div class="bg-darker rounded-lg overflow-hidden hover:shadow-lg transition">
+                        <img src="https://via.placeholder.com/300x200/6d28d9/ffffff?text=Book+of+Dead" alt="Book of Dead" class="w-full">
+                        <div class="p-4">
+                            <h3 class="font-bold mb-2">Book of Dead</h3>
+                            <p class="text-sm text-gray-400 mb-3">Play'n GO</p>
+                            <a href="#igrat" class="text-secondary text-sm font-semibold">Играть →</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Игра 4 -->
+                    <div class="bg-darker rounded-lg overflow-hidden hover:shadow-lg transition">
+                        <img src="https://via.placeholder.com/300x200/f59e0b/ffffff?text=Big+Bass+Bonanza" alt="Big Bass Bonanza" class="w-full">
+                        <div class="p-4">
+                            <h3 class="font-bold mb-2">Big Bass Bonanza</h3>
+                            <p class="text-sm text-gray-400 mb-3">Pragmatic Play</p>
+                            <a href="#igrat" class="text-secondary text-sm font-semibold">Играть →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <main>  
-        <!-- Hero Section -->  
-        <section class="py-20 bg-gradient-to-b from-gray-800 to-gray-900">  
-            <div class="container mx-auto px-4 text-center">  
-                <h1 class="text-4xl md:text-6xl font-bold mb-6">Cat Casino - Ваш путь к азартным играм</h1>  
-                <p class="text-xl text-gray-300 mb-8">Присоединяйтесь к тысячам игроков онлайн и наслаждайтесь лучшими игровыми автоматами!</p>  
-                <div class="flex justify-center gap-4">  
-                    <a href="#" class="bg-purple-600 px-8 py-3 rounded-lg text-lg font-semibold hover:bg-purple-700 transition">Начать игру</a>  
-                    <a href="#" class="bg-gray-700 px-8 py-3 rounded-lg text-lg font-semibold hover:bg-gray-600 transition">Актуальное зеркало</a>  
-                </div>  
-            </div>  
-        </section>  
+        <!-- Как играть -->
+        <section class="py-16 bg-darker" id="igrat">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12">Как начать играть в Cat Casino?</h2>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-dark p-6 rounded-lg">
+                        <div class="text-secondary text-2xl font-bold mb-4">1</div>
+                        <h3 class="text-xl font-semibold mb-3">Регистрация</h3>
+                        <p class="text-gray-300">Заполните простую форму регистрации на официальном сайте или через рабочее зеркало</p>
+                    </div>
+                    
+                    <div class="bg-dark p-6 rounded-lg">
+                        <div class="text-secondary text-2xl font-bold mb-4">2</div>
+                        <h3 class="text-xl font-semibold mb-3">Пополнение счёта</h3>
+                        <p class="text-gray-300">Используйте промокод CAT2024 для получения 200% бонуса к первому депозиту</p>
+                    </div>
+                    
+                    <div class="bg-dark p-6 rounded-lg">
+                        <div class="text-secondary text-2xl font-bold mb-4">3</div>
+                        <h3 class="text-xl font-semibold mb-3">Играть и выигрывать</h3>
+                        <p class="text-gray-300">Выбирайте любимые слоты из каталога Cat Casino и получайте выплаты</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <!-- Features -->  
-        <section class="py-16">  
-            <div class="container mx-auto px-4">  
-                <h2 class="text-3xl font-bold text-center mb-12">Преимущества регистрации в Cat Casino</h2>  
-                <div class="grid md:grid-cols-3 gap-8">  
-                    <div class="bg-gray-800 p-6 rounded-lg">  
-                        <h3 class="text-xl font-semibold mb-4">Быстрая регистрация</h3>  
-                        <p class="text-gray-300">Пройдите регистрацию за несколько минут и получайте доступ ко всем возможностям казино.</p>  
-                    </div>  
-                    <div class="bg-gray-800 p-6 rounded-lg">  
-                        <h3 class="text-xl font-semibold mb-4">Лучшие игровые автоматы</h3>  
-                        <p class="text-gray-300">У нас огромный выбор слотов от ведущих производителей для незабываемых впечатлений.</p>  
-                    </div>  
-                    <div class="bg-gray-800 p-6 rounded-lg">  
-                        <h3 class="text-xl font-semibold mb-4">Надежный доступ</h3>  
-                        <p class="text-gray-300">Обеспечьте себе доступ к актуальным зеркалам для бесперебойного входа на сайт.</p>  
-                    </div>  
-                </div>  
-            </div>  
-        </section>  
+        <!-- Рабочее зеркало -->
+        <section class="py-16 bg-primary" id="zerkalo">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl font-bold mb-6">Актуальное рабочее зеркало Cat Casino</h2>
+                <p class="text-xl mb-8">Если официальный сайт недоступен, используйте зеркало для входа:</p>
+                <div class="max-w-2xl mx-auto bg-dark p-6 rounded-lg">
+                    <div class="text-xl font-mono mb-4">catcasino<span class="text-secondary">702</span>.com</div>
+                    <a href="#" class="inline-block bg-secondary text-dark px-6 py-3 rounded-lg font-bold hover:bg-yellow-400 transition">
+                        Перейти на зеркало
+                    </a>
+                </div>
+                <p class="mt-6 text-sm">Зеркало обновляется ежедневно и обеспечивает стабильный доступ к казино</p>
+            </div>
+        </section>
 
-        <!-- Games Section -->  
-        <section class="py-16 bg-gray-800">  
-            <div class="container mx-auto px-4">  
-                <h2 class="text-3xl font-bold text-center mb-12">Популярные слоты в Cat Casino</h2>  
-                <div class="grid md:grid-cols-4 gap-6">  
-                    <div class="bg-gray-700 rounded-lg overflow-hidden">  
-                        <img src="./placeholder/sugar_rush_xmas.webp" alt="Слот Sugar Rush Xmas в Cat Casino" class="w-full">  
-                        <div class="p-4">  
-                            <h3 class="font-semibold mb-2">Sugar Rush Xmas</h3>  
-                            <p class="text-sm text-gray-300">Популярный слот от Pragmatic Play.</p>  
-                        </div>  
-                    </div>  
-                    <div class="bg-gray-700 rounded-lg overflow-hidden">  
-                        <img src="./placeholder/rich_wilde_and_the_tome_of_insanity.webp" alt="Слот Rich Wilde" class="w-full">  
-                        <div class="p-4">  
-                            <h3 class="font-semibold mb-2">Rich Wilde and the Tome of Insanity</h3>  
-                            <p class="text-sm text-gray-300">Приключенческий слот для искателей острых ощущений.</p>  
-                        </div>  
-                    </div>  
-                    <div class="bg-gray-700 rounded-lg overflow-hidden">  
-                        <img src="./placeholder/mental.webp" alt="Слот Mental" class="w-full">  
-                        <div class="p-4">  
-                            <h3 class="font-semibold mb-2">Mental</h3>  
-                            <p class="text-sm text-gray-300">Новый уровень азартных игр от NOLIMIT.</p>  
-                        </div>  
-                    </div>  
-                    <div class="bg-gray-700 rounded-lg overflow-hidden">  
-                        <img src="./placeholder/eternal-hot.jpg" alt="Слот Lucky Lady" class="w-full">  
-                        <div class="p-4">  
-                            <h3 class="font-semibold mb-2">Lucky Lady</h3>  
-                            <p class="text-sm text-gray-300">Современная классика, в которую стоит сыграть!</p>  
-                        </div>  
-                    </div>  
-                </div>  
-            </div>  
-        </section>  
+        <!-- Отзывы -->
+        <section class="py-16 bg-dark">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12">Отзывы игроков Cat Casino</h2>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-darker p-6 rounded-lg">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-primary mr-4"></div>
+                            <div>
+                                <h3 class="font-bold">Александр</h3>
+                                <div class="flex text-yellow-400">
+                                    ★★★★★
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-300">"Играю в Cat Casino уже год, выплаты приходят быстро. Особенно нравятся слоты от Pragmatic Play. Зеркало всегда нахожу в их Telegram-канале."</p>
+                    </div>
+                    
+                    <div class="bg-darker p-6 rounded-lg">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-primary mr-4"></div>
+                            <div>
+                                <h3 class="font-bold">Екатерина</h3>
+                                <div class="flex text-yellow-400">
+                                    ★★★★☆
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-300">"Зарегистрировалась с бонусом 200%, получила хороший стартовый капитал. Иногда бывают проблемы с доступом, но зеркало решает этот вопрос."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-        <!-- FAQ Section -->  
-        <section class="py-16">  
-            <div class="container mx-auto px-4">  
-                <h2 class="text-3xl font-bold text-center mb-12">Часто задаваемые вопросы</h2>  
-                <div class="max-w-3xl mx-auto space-y-6">  
-                    <div class="bg-gray-800 p-6 rounded-lg">  
-                        <h3 class="text-xl font-semibold mb-3">Как зарегистрироваться в Cat Casino?</h3>  
-                        <p class="text-gray-300">Регистрация в Cat Casino занимает всего несколько минут. Нажмите кнопку 'Регистрация', заполните необходимые данные и подтвердите email.</p>  
-                    </div>  
-                    <div class="bg-gray-800 p-6 rounded-lg">  
-                        <h3 class="text-xl font-semibold mb-3">Как получить доступ к Cat Casino через зеркало?</h3>  
-                        <p class="text-gray-300">Актуальное рабочее зеркало Cat Casino всегда доступно на официальных каналах казино. Используйте его для бесперебойного доступа к сайту.</p>  
-                    </div>  
-                    <div class="bg-gray-800 p-6 rounded-lg">  
-                        <h3 class="text-xl font-semibold mb-3">Какие игровые автоматы доступны в Cat Casino?</h3>  
-                        <p class="text-gray-300">В Cat Casino представлен широкий выбор слотов от ведущих производителей, включая классические и современные автоматы, настольные игры и live-казино.</p>  
-                    </div>  
-                </div>  
-            </div>  
-        </section>  
-
-        <!-- CTA Section -->  
-        <section class="py-20 bg-purple-900">  
-            <div class="container mx-auto px-4 text-center">  
-                <h2 class="text-3xl font-bold mb-6">Готовы начать игру?</h2>  
-                <p class="text-xl text-gray-300 mb-8">Присоединяйтесь к тысячам игроков Cat Casino прямо сейчас</p>  
-                <a href="#" class="bg-purple-600 px-8 py-3 rounded-lg text-lg font-semibold hover:bg-purple-700 transition inline-block">Регистрация</a>  
-            </div>  
-        </section>  
-    </main>  
-
-    <footer class="bg-gray-800 py-8">  
-        <div class="container mx-auto px-4">  
-            <div class="text-center text-gray-400">  
-                <p class="mb-4">Cat Casino - лицензированное онлайн казино. 18+</p>  
-                <p>© 2025 Cat Casino. Все права защищены.</p>  
-            </div>  
-        </div>  
-    </footer>  
-</body>  
+    <!-- Подвал -->
+    <footer class="bg-darker py-8 border-t border-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="text-center text-gray-400">
+                <p class="mb-4">Cat Casino - официальный сайт с лицензионными играми. 18+</p>
+                <p>© 2024 Cat Casino. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+</body>
 </html>
